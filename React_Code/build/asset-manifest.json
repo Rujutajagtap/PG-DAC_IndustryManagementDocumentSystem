@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.365dbe9e.chunk.css",
+    "main.js": "/static/js/main.f4ce1d9f.chunk.js",
+    "main.js.map": "/static/js/main.f4ce1d9f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8ded7919.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8ded7919.js.map",
+    "static/css/2.ebe04f07.chunk.css": "/static/css/2.ebe04f07.chunk.css",
+    "static/js/2.d8cba37d.chunk.js": "/static/js/2.d8cba37d.chunk.js",
+    "static/js/2.d8cba37d.chunk.js.map": "/static/js/2.d8cba37d.chunk.js.map",
+    "static/js/3.4585e520.chunk.js": "/static/js/3.4585e520.chunk.js",
+    "static/js/3.4585e520.chunk.js.map": "/static/js/3.4585e520.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ebe04f07.chunk.css.map": "/static/css/2.ebe04f07.chunk.css.map",
+    "static/css/main.365dbe9e.chunk.css.map": "/static/css/main.365dbe9e.chunk.css.map",
+    "static/js/2.d8cba37d.chunk.js.LICENSE.txt": "/static/js/2.d8cba37d.chunk.js.LICENSE.txt",
+    "static/media/airplane1-removebg-preview.6f25e967.png": "/static/media/airplane1-removebg-preview.6f25e967.png",
+    "static/media/carpet.4fa82fcd.jpg": "/static/media/carpet.4fa82fcd.jpg",
+    "static/media/magnifying-glass.d8b94be5.png": "/static/media/magnifying-glass.d8b94be5.png",
+    "static/media/plane-ticket.84a01635.png": "/static/media/plane-ticket.84a01635.png",
+    "static/media/plane1.1503378e.jpg": "/static/media/plane1.1503378e.jpg",
+    "static/media/plane3.2de7ed08.jpg": "/static/media/plane3.2de7ed08.jpg",
+    "static/media/plane5.49556a9c.jpg": "/static/media/plane5.49556a9c.jpg",
+    "static/media/TicketStyle.css": "/static/media/planebg.8a183474.png",
+    "static/media/planebg1.246c1738.jpg": "/static/media/planebg1.246c1738.jpg",
+    "static/media/travel1.7561bd82.jpg": "/static/media/travel1.7561bd82.jpg",
+    "static/media/travelling.ba69dc0a.png": "/static/media/travelling.ba69dc0a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8ded7919.js",
+    "static/css/2.ebe04f07.chunk.css",
+    "static/js/2.d8cba37d.chunk.js",
+    "static/css/main.365dbe9e.chunk.css",
+    "static/js/main.f4ce1d9f.chunk.js"
+  ]
+}

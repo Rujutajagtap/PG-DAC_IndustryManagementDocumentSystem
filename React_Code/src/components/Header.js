@@ -1,0 +1,161 @@
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { Navbar,Container } from 'react-bootstrap';
+
+
+function Header(props) {
+    const history = useNavigate();
+   
+
+    /** The component will be rendered when user has not signed in */
+    const loggedIn = (
+        
+            <ul className="nav justify-content-end">
+             <li className="nav-item">
+                    
+                </li>
+             <li className="nav-item">
+                <Link className="nav-link text-info" to="/">
+                    <button className="btn btn-outline-info">Home</button>
+                </Link>
+            </li>
+                <li className="nav-item">
+                <Link className="nav-link text-info" to="/login">
+                    <button className="btn btn-outline-info">Login</button>
+                </Link>
+                </li>
+            </ul>
+        
+    );
+
+    // clearing local storage for given items when user logs out
+    const userClear = () => (
+        localStorage.removeItem('user'),
+        localStorage.clear()
+    )
+    /** The component will be rendered when user is signed in */
+    const loggedOut = (
+            <ul className="nav justify-content-end">
+                {/* {console.log(JSON.parse(localStorage.getItem('user')).isadmin)} */}
+               
+
+                <li className="nav-item">
+                    <Link className="nav-link text-info" to="/">
+                        <button className="btn btn-outline-info">Home</button>
+                    </Link>
+                </li>
+
+                <li className="nav-link text-info">
+                {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user')).isadmin ==0 
+                &&
+                    <div class="dropdown">
+                        <button class="btn btn-outline-info" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Department
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <Link className="nav-link text-info" to="/Audit"><a class="dropdown-item" >Audit</a></Link>
+                            <Link className="nav-link text-info" to="/Maintainance"><a class="dropdown-item" >Maintainance</a></Link>
+                        </div>
+                    </div>}
+                </li>
+               
+
+                {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user')).isadmin ===1 
+                &&
+                <li className="nav-item">
+                    <Link className="nav-link text-info" to="/Register">
+                        <button className="btn btn-outline-info">Add User</button>
+                    </Link>
+                </li>}
+
+
+                {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user')).isadmin ===1
+                &&
+                <li className="nav-item">
+                    <Link className="nav-link text-info" to="/UserList">
+                        <button className="btn btn-outline-info">All Users</button>
+                    </Link>
+                </li>
+                }
+
+                {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user')).isadmin ===2
+                // { (localStorage.getItem('user')).isadmin ===2 
+                &&
+                <li className="nav-item">
+                    <Link className="nav-link text-info" to="/Managerdept">
+                        <button className="btn btn-outline-info">View Reports</button>
+                    </Link>
+                </li>
+                }
+
+                <li className="nav-item">
+                    <Link className="nav-link text-info" to="/">
+                        <button onClick={userClear} className="btn btn-outline-info">Logout</button>
+                    </Link>
+                </li>
+
+                { localStorage.getItem('user') && JSON.parse(localStorage.getItem('user')).isadmin ===0 
+                &&  
+                <li className="nav-item nav-link text-info">
+                    <h6 style={{marginTop:'7px'}}><b className='text-warning'>Welcome {JSON.parse(localStorage.getItem('user')).username}</b></h6>
+                </li>
+                }
+
+                
+                {localStorage.getItem('user') && JSON.parse(localStorage.getItem('user')).isadmin ===1
+                &&
+                <li className="nav-item">
+                    <Link className="nav-link text-info" to="/admin">
+                        <button className="btn btn-outline-warning">Admin</button>
+                    </Link>
+                </li>
+                }
+{/* { JSON.parse(localStorage.getItem('user')).isadmin ===2 */}
+ 
+{localStorage.getItem('user') && JSON.parse(localStorage.getItem('user')).isadmin ===2
+
+               
+               
+                &&
+                <li className="nav-item">
+                    <Link className="nav-link text-info" to="/manager">
+                        <button className="btn btn-outline-warning">Manager</button>
+                    </Link>
+                </li>
+                }
+                
+            </ul>
+    );
+    
+
+    return (
+        <div>
+         
+         <Navbar bg="dark" variant="dark" className="fixed-top">
+    <Container>
+    <Navbar.Brand href="/">
+    Industry Document Management System</Navbar.Brand>
+    <nav >
+              
+  { localStorage.getItem('user')  ? loggedOut : loggedIn  }  
+            </nav>
+    </Container>
+  </Navbar>
+
+
+
+
+
+
+
+            
+        </div>
+    );
+};
+
+
+
+
+
+export default Header;
